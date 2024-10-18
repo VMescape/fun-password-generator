@@ -1,0 +1,260 @@
+.title {
+    text-align: center;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #DB5079;
+    font-size: 50px;
+}
+
+.password-output {
+    border: dotted 5px #DB5079;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border-radius: 50px;
+
+    .password {
+        letter-spacing: 5px;
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+        color: #333;
+    }
+}
+
+.password-output:hover {
+    cursor: pointer;
+}
+
+.copied {
+    text-align: center;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.settings {
+    background: #f7f7f7;
+    padding: 3%;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 5%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.settings label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.settings input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.settings input[type="range"] {
+    width: 100%;
+}
+
+.settings span {
+    color: #DB5079;
+    font-weight: 600;
+}
+
+.settings div {
+    margin-bottom: 15px;
+}
+
+.settings label span {
+    font-size: 18px;
+}
+
+#done {
+    color: rgb(33, 152, 33)
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgb(206, 206, 206);
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #DB5079;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #DB5079;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #DB5079;
+    cursor: pointer;
+  }
+
+.range {
+    margin-top: 5%;
+}
+
+.fun-mode {
+    animation: rainbowGlow 1.5s infinite alternate;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.5), 
+                 0 0 15px rgba(255, 0, 0, 0.3), 0 0 20px rgba(255, 204, 0, 0.8), 
+                 0 0 30px rgba(255, 204, 0, 0.5), 0 0 40px rgba(255, 204, 0, 0.3),
+                 0 0 50px rgba(0, 204, 0, 0.8), 0 0 60px rgba(0, 204, 0, 0.5),
+                 0 0 70px rgba(0, 204, 0, 0.3);
+}
+
+.settings input[type="checkbox"] {
+    display: none;
+}
+
+.settings label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.settings label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #DB5079;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.settings input[type="checkbox"]:checked + span::before {
+    content: '🎀';
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings label:hover::before {
+    background-color: #f8d7e3;
+}
+
+.settings span {
+    color: #333;
+    font-weight: 500;
+}
+
+.settings input[type="checkbox"]:checked + span {
+    color: #DB5079;
+    font-weight: 600;
+}
+
+/* Styles for the password length section */
+.length label {
+    padding-left: 0;  /* Remove left padding as there's no checkbox */
+}
+
+.length label::before {
+    content: none;  /* Remove the checkbox style */
+}
+
+.length span {
+    color: #DB5079;
+    font-weight: 600;
+}
+
+@keyframes rainbowGlow {
+    0% {
+        color: #ff0000; /* Red */
+    }
+    14% {
+        color: #ff7f00; /* Orange */
+    }
+    28% {
+        color: #ffff00; /* Yellow */
+    }
+    42% {
+        color: #00ff00; /* Green */
+    }
+    57% {
+        color: #00ffff; /* Cyan */
+    }
+    71% {
+        color: #0000ff; /* Blue */
+    }
+    85% {
+        color: #4b0082; /* Indigo */
+    }
+    100% {
+        color: #9400d3; /* Violet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  
+    .password-output {
+      width: 90%;
+      margin-top: 20%;
+    }
+  
+    .password {
+      font-size: 18px;
+      padding: 15px;
+    }
+  
+    .settings {
+      width: 85%;
+      padding: 20px;
+      margin-top: 20%;
+    }
+  
+    .settings label span {
+      font-size: 16px;
+    }
+  
+    .length input[type="range"] {
+      width: 100%;
+    }
+  
+    .copied {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
